@@ -1,24 +1,24 @@
-# README
+## Using the HEROES API
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Include a Header Authorization
 
-Things you may want to cover:
+For all requests, use an **Authorization header**, of size> = 10 characters, so that you can only manipulate your data, for example:
 
-* Ruby version
+```bash
+curl --request GET \
+  --url 'https://newapi-rails.herokuapp.com/api/heroes' \
+  --header 'Authorization: anyTokenCanBeUsed'
+```
 
-* System dependencies
+### API Endpoint
 
-* Configuration
+The following endpoints are available:
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+| Endpoints                   | Usage                                     | Params             |
+| --------------------------- | ----------------------------------------- | ------------------ |
+| `GET /api/heroes`           | Get all of the heroes.                    |                    |
+| `GET /api/heroes?name=term` | Get all heroes with `name` like a `term`. | **term**: [String] |
+| `GET /api/heroes/:id`       | Get the details of a single hero.         |                    |
+| `POST /api/heroes`          | Add a new hero.                           | **name**: [String] |
+| `PUT /api/heroes/:id`       | Edit the details of an existing hero.     | **name**: [String] |
+| `DELETE /api/heroes/:id`    | Remove the hero.                          |                    |
