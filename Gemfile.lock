@@ -98,6 +98,7 @@ GEM
     nio4r (2.5.8)
     nokogiri (1.12.3-x86_64-linux)
       racc (~> 1.4)
+    pg (1.2.3)
     puma (5.4.0)
       nio4r (~> 2.0)
     racc (1.5.2)
@@ -160,6 +161,7 @@ DEPENDENCIES
   byebug
   faker (~> 2.18)
   listen (~> 3.3)
+  pg (~> 1.2)
   puma (~> 5.0)
   rails (~> 6.1.4)
   spring
